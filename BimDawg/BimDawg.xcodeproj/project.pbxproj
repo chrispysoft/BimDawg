@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		83028193261E4B0500A0F389 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83028192261E4B0500A0F389 /* Default-568h@2x.png */; };
+		83162C6A214F0A7800B41296 /* CoordinateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83162C69214F0A7800B41296 /* CoordinateProvider.swift */; };
+		83460E672159AF25006E4ED2 /* Array+RegexFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A67D102159AA6200C2B25C /* Array+RegexFilter.swift */; };
+		834F666B214883A700942CBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F666A214883A700942CBD /* AppDelegate.swift */; };
+		834F6670214883A700942CBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 834F666E214883A700942CBD /* Main.storyboard */; };
+		834F6672214883A700942CBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 834F6671214883A700942CBD /* Assets.xcassets */; };
+		834F66932148841300942CBD /* StopListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F66902148841300942CBD /* StopListController.swift */; };
+		834F66942148841300942CBD /* DepartureListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F66912148841300942CBD /* DepartureListController.swift */; };
+		834F66952148841300942CBD /* StopListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F66922148841300942CBD /* StopListModel.swift */; };
+		834F66972148842100942CBD /* EFAClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F66962148842100942CBD /* EFAClient.swift */; };
+		8354239F219E2BAA00362396 /* Danube-Union.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 8354239E219E2BAA00362396 /* Danube-Union.gpx */; };
+		836995EE2183CA87008B89B4 /* EFADBCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836995ED2183CA87008B89B4 /* EFADBCache.swift */; };
+		83773E502186498E0089826E /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83773E4F2186498E0089826E /* IndicatorView.swift */; };
+		839E2693218B0DC9007BC75C /* BimDawg_DBCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839E2690218B0DC9007BC75C /* BimDawg_DBCacheTests.swift */; };
+		839E2694218B0DC9007BC75C /* BimDawg_ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839E2691218B0DC9007BC75C /* BimDawg_ExtensionsTests.swift */; };
+		83C5109F21837CDB007AFDF9 /* DepartureDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C5109E21837CDB007AFDF9 /* DepartureDetailController.swift */; };
+		83C9E48121A0BCF0002E2C8F /* StopListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C9E48021A0BCF0002E2C8F /* StopListTableViewCell.swift */; };
+		83C9E48421A0BDA7002E2C8F /* DepartureListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C9E48321A0BDA7002E2C8F /* DepartureListTableViewCell.swift */; };
+		83D2CBE2218F06E700164705 /* EFA_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D2CBE1218F06E700164705 /* EFA_Tests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		839E2684218B0D4C007BC75C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 834F665F214883A700942CBD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 834F6666214883A700942CBD;
+			remoteInfo = BimDawg;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		83028192261E4B0500A0F389 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		83162C69214F0A7800B41296 /* CoordinateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateProvider.swift; sourceTree = "<group>"; };
+		834F6667214883A700942CBD /* BimDawg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BimDawg.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		834F666A214883A700942CBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		834F666F214883A700942CBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		834F6671214883A700942CBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		834F6676214883A800942CBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		834F66902148841300942CBD /* StopListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopListController.swift; sourceTree = "<group>"; };
+		834F66912148841300942CBD /* DepartureListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartureListController.swift; sourceTree = "<group>"; };
+		834F66922148841300942CBD /* StopListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopListModel.swift; sourceTree = "<group>"; };
+		834F66962148842100942CBD /* EFAClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EFAClient.swift; sourceTree = "<group>"; };
+		8354239E219E2BAA00362396 /* Danube-Union.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Danube-Union.gpx"; sourceTree = "<group>"; };
+		836995ED2183CA87008B89B4 /* EFADBCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EFADBCache.swift; sourceTree = "<group>"; };
+		83773E4F2186498E0089826E /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
+		839E267F218B0D4C007BC75C /* BimDawgTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BimDawgTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		839E2683218B0D4C007BC75C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		839E2690218B0DC9007BC75C /* BimDawg_DBCacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BimDawg_DBCacheTests.swift; sourceTree = "<group>"; };
+		839E2691218B0DC9007BC75C /* BimDawg_ExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BimDawg_ExtensionsTests.swift; sourceTree = "<group>"; };
+		83A67D102159AA6200C2B25C /* Array+RegexFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+RegexFilter.swift"; sourceTree = "<group>"; };
+		83ACFABF219EEC07008B1FED /* BimDawg Logo.afdesign */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BimDawg Logo.afdesign"; sourceTree = "<group>"; };
+		83C5109E21837CDB007AFDF9 /* DepartureDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartureDetailController.swift; sourceTree = "<group>"; };
+		83C9E48021A0BCF0002E2C8F /* StopListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopListTableViewCell.swift; sourceTree = "<group>"; };
+		83C9E48321A0BDA7002E2C8F /* DepartureListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartureListTableViewCell.swift; sourceTree = "<group>"; };
+		83D2CBE1218F06E700164705 /* EFA_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EFA_Tests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		834F6664214883A700942CBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		839E267C218B0D4C007BC75C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		83162C68214F0A0600B41296 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				83162C69214F0A7800B41296 /* CoordinateProvider.swift */,
+				836995E82183C72E008B89B4 /* EFA */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		831DE3BE2149B65B00DB8C8D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				83C9E47E21A0BCB9002E2C8F /* Stop List */,
+				83C9E47F21A0BCD0002E2C8F /* Departure List */,
+				83C9E48221A0BD77002E2C8F /* Departure Detail */,
+				83773E4E218649740089826E /* Views */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		831DE3C12149B6C300DB8C8D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				834F66922148841300942CBD /* StopListModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		834F665E214883A700942CBD = {
+			isa = PBXGroup;
+			children = (
+				834F6669214883A700942CBD /* BimDawg */,
+				839E2680218B0D4C007BC75C /* BimDawgTests */,
+				834F6668214883A700942CBD /* Products */,
+				83E52421219E17520005D8D6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		834F6668214883A700942CBD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				834F6667214883A700942CBD /* BimDawg.app */,
+				839E267F218B0D4C007BC75C /* BimDawgTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		834F6669214883A700942CBD /* BimDawg */ = {
+			isa = PBXGroup;
+			children = (
+				834F6676214883A800942CBD /* Info.plist */,
+				834F6671214883A700942CBD /* Assets.xcassets */,
+				83028192261E4B0500A0F389 /* Default-568h@2x.png */,
+				834F666E214883A700942CBD /* Main.storyboard */,
+				834F666A214883A700942CBD /* AppDelegate.swift */,
+				831DE3BE2149B65B00DB8C8D /* View Controllers */,
+				83162C68214F0A0600B41296 /* Controller */,
+				831DE3C12149B6C300DB8C8D /* Model */,
+				83A67D0F2159AA3500C2B25C /* Utilities */,
+				83542395219E24EA00362396 /* GPX Test Files */,
+				83F6EEED219F012500163750 /* Artwork */,
+			);
+			path = BimDawg;
+			sourceTree = "<group>";
+		};
+		83542395219E24EA00362396 /* GPX Test Files */ = {
+			isa = PBXGroup;
+			children = (
+				8354239E219E2BAA00362396 /* Danube-Union.gpx */,
+			);
+			path = "GPX Test Files";
+			sourceTree = "<group>";
+		};
+		836995E82183C72E008B89B4 /* EFA */ = {
+			isa = PBXGroup;
+			children = (
+				834F66962148842100942CBD /* EFAClient.swift */,
+				836995ED2183CA87008B89B4 /* EFADBCache.swift */,
+			);
+			path = EFA;
+			sourceTree = "<group>";
+		};
+		83773E4E218649740089826E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				83773E4F2186498E0089826E /* IndicatorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		839E2680218B0D4C007BC75C /* BimDawgTests */ = {
+			isa = PBXGroup;
+			children = (
+				839E2690218B0DC9007BC75C /* BimDawg_DBCacheTests.swift */,
+				839E2691218B0DC9007BC75C /* BimDawg_ExtensionsTests.swift */,
+				83D2CBE1218F06E700164705 /* EFA_Tests.swift */,
+				839E2683218B0D4C007BC75C /* Info.plist */,
+			);
+			path = BimDawgTests;
+			sourceTree = "<group>";
+		};
+		83A67D0F2159AA3500C2B25C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				83A67D102159AA6200C2B25C /* Array+RegexFilter.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		83C9E47E21A0BCB9002E2C8F /* Stop List */ = {
+			isa = PBXGroup;
+			children = (
+				834F66902148841300942CBD /* StopListController.swift */,
+				83C9E48021A0BCF0002E2C8F /* StopListTableViewCell.swift */,
+			);
+			path = "Stop List";
+			sourceTree = "<group>";
+		};
+		83C9E47F21A0BCD0002E2C8F /* Departure List */ = {
+			isa = PBXGroup;
+			children = (
+				834F66912148841300942CBD /* DepartureListController.swift */,
+				83C9E48321A0BDA7002E2C8F /* DepartureListTableViewCell.swift */,
+			);
+			path = "Departure List";
+			sourceTree = "<group>";
+		};
+		83C9E48221A0BD77002E2C8F /* Departure Detail */ = {
+			isa = PBXGroup;
+			children = (
+				83C5109E21837CDB007AFDF9 /* DepartureDetailController.swift */,
+			);
+			path = "Departure Detail";
+			sourceTree = "<group>";
+		};
+		83E52421219E17520005D8D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		83F6EEED219F012500163750 /* Artwork */ = {
+			isa = PBXGroup;
+			children = (
+				83ACFABF219EEC07008B1FED /* BimDawg Logo.afdesign */,
+			);
+			path = Artwork;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		834F6666214883A700942CBD /* BimDawg */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 834F6679214883A800942CBD /* Build configuration list for PBXNativeTarget "BimDawg" */;
+			buildPhases = (
+				834F6663214883A700942CBD /* Sources */,
+				834F6664214883A700942CBD /* Frameworks */,
+				834F6665214883A700942CBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BimDawg;
+			productName = BimDawg;
+			productReference = 834F6667214883A700942CBD /* BimDawg.app */;
+			productType = "com.apple.product-type.application";
+		};
+		839E267E218B0D4C007BC75C /* BimDawgTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 839E2686218B0D4C007BC75C /* Build configuration list for PBXNativeTarget "BimDawgTests" */;
+			buildPhases = (
+				839E267B218B0D4C007BC75C /* Sources */,
+				839E267C218B0D4C007BC75C /* Frameworks */,
+				839E267D218B0D4C007BC75C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				839E2685218B0D4C007BC75C /* PBXTargetDependency */,
+			);
+			name = BimDawgTests;
+			productName = BimDawgTests;
+			productReference = 839E267F218B0D4C007BC75C /* BimDawgTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		834F665F214883A700942CBD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = chrispysoft;
+				TargetAttributes = {
+					834F6666214883A700942CBD = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+					839E267E218B0D4C007BC75C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 834F6666214883A700942CBD;
+					};
+				};
+			};
+			buildConfigurationList = 834F6662214883A700942CBD /* Build configuration list for PBXProject "BimDawg" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 834F665E214883A700942CBD;
+			productRefGroup = 834F6668214883A700942CBD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				834F6666214883A700942CBD /* BimDawg */,
+				839E267E218B0D4C007BC75C /* BimDawgTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		834F6665214883A700942CBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				834F6672214883A700942CBD /* Assets.xcassets in Resources */,
+				83028193261E4B0500A0F389 /* Default-568h@2x.png in Resources */,
+				834F6670214883A700942CBD /* Main.storyboard in Resources */,
+				8354239F219E2BAA00362396 /* Danube-Union.gpx in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		839E267D218B0D4C007BC75C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		834F6663214883A700942CBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				834F66942148841300942CBD /* DepartureListController.swift in Sources */,
+				83C9E48421A0BDA7002E2C8F /* DepartureListTableViewCell.swift in Sources */,
+				834F666B214883A700942CBD /* AppDelegate.swift in Sources */,
+				83162C6A214F0A7800B41296 /* CoordinateProvider.swift in Sources */,
+				834F66952148841300942CBD /* StopListModel.swift in Sources */,
+				83460E672159AF25006E4ED2 /* Array+RegexFilter.swift in Sources */,
+				836995EE2183CA87008B89B4 /* EFADBCache.swift in Sources */,
+				834F66972148842100942CBD /* EFAClient.swift in Sources */,
+				83C5109F21837CDB007AFDF9 /* DepartureDetailController.swift in Sources */,
+				834F66932148841300942CBD /* StopListController.swift in Sources */,
+				83773E502186498E0089826E /* IndicatorView.swift in Sources */,
+				83C9E48121A0BCF0002E2C8F /* StopListTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		839E267B218B0D4C007BC75C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83D2CBE2218F06E700164705 /* EFA_Tests.swift in Sources */,
+				839E2694218B0DC9007BC75C /* BimDawg_ExtensionsTests.swift in Sources */,
+				839E2693218B0DC9007BC75C /* BimDawg_DBCacheTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		839E2685218B0D4C007BC75C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 834F6666214883A700942CBD /* BimDawg */;
+			targetProxy = 839E2684218B0D4C007BC75C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		834F666E214883A700942CBD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				834F666F214883A700942CBD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		834F6677214883A800942CBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = GZP54DZ33Y;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		834F6678214883A800942CBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = GZP54DZ33Y;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		834F667A214883A800942CBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BimDawg/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chrispysoft.BimDawg;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		834F667B214883A800942CBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BimDawg/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chrispysoft.BimDawg;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		839E2687218B0D4C007BC75C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BimDawgTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chrispysoft.BimDawgTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BimDawg.app/BimDawg";
+			};
+			name = Debug;
+		};
+		839E2688218B0D4C007BC75C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BimDawgTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chrispysoft.BimDawgTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BimDawg.app/BimDawg";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		834F6662214883A700942CBD /* Build configuration list for PBXProject "BimDawg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				834F6677214883A800942CBD /* Debug */,
+				834F6678214883A800942CBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		834F6679214883A800942CBD /* Build configuration list for PBXNativeTarget "BimDawg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				834F667A214883A800942CBD /* Debug */,
+				834F667B214883A800942CBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		839E2686218B0D4C007BC75C /* Build configuration list for PBXNativeTarget "BimDawgTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				839E2687218B0D4C007BC75C /* Debug */,
+				839E2688218B0D4C007BC75C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 834F665F214883A700942CBD /* Project object */;
+}

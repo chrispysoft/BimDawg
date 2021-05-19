@@ -39,7 +39,7 @@ public class EFADBCache {
 		let result = sqlite3_close(dbPtr)
 		if result != SQLITE_OK {
 			let errmsg = String(cString: sqlite3_errmsg(dbPtr)!)
-			print("Error closing database: \(errmsg)")
+			NSLog("Error closing database: \(errmsg)")
 		}
 	}
 	

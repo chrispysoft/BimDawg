@@ -14,10 +14,10 @@ import CoreLocation
 public class EFAClient {
 	private let baseURL = "https://www.linzag.at/static/"
 	private let departureLimit = 10
+    
+    
+    public init() {} // needed for test cases only
 	
-	public init() {
-		
-	}
 	
 	// MARK: - Load Stops
 	public enum StopRequest {
@@ -120,7 +120,7 @@ public class EFAClient {
 			
 			switch downloadResult {
 			case .success(let jsonObject):
-				guard let rootDict        = jsonObject               as? [String: Any] else { completion(.failure(.jsonParsingError("root"))); return }
+				guard let rootDict        = jsonObject              as? [String: Any] else { completion(.failure(.jsonParsingError("root"))); return }
 				guard let servingLinesObj = rootDict["servingLines"] as? [String: Any] else { completion(.failure(.jsonParsingError("servingLines"))); return }
 				
 				var lines = [Line]()
@@ -205,7 +205,7 @@ public class EFAClient {
 //        urlComponents.query! += String(format: "&type_origin=stopID&name_origin=%@&type_destination=stopID&name_destination=%@", originStopID, destinationStopID)
 //        //urlComponents.query! += String(format: "&type_origin=stopID&name_origin=%@&type_destination=stop&name_destination=%@", originStopID, destinationName)
 //
-//        print(urlComponents.url!)
+//        NSLog(urlComponents.url!)
 //
 //        let urlRequest = URLRequest(url: urlComponents.url!, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: 10)
 //        let urlSession = URLSession(configuration: .default)

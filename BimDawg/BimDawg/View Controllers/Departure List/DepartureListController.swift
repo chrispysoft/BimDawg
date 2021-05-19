@@ -36,7 +36,7 @@ class DepartureListController: UITableViewController {
 	
 	// MARK: - Load table data
 	@objc func loadDepartures() {
-		print("loadDepartures")
+		NSLog("loadDepartures")
 		guard let stop = stop else { NSLog("stop is nil"); return }
 		let efaClient = EFAClient()
 		

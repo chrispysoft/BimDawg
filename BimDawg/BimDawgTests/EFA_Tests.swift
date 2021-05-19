@@ -88,7 +88,7 @@ class EFA_Tests: XCTestCase {
 //        client.loadTrip(from: originStopID, to: destinationStopID) { (result) in
 //            switch result {
 //            case .success(let departures):
-//                print(departures)
+//                NSLog(departures)
 //            case .failure(let error):
 //                XCTFail(error.localizedDescription)
 //            }

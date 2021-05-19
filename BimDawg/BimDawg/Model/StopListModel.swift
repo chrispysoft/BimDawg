@@ -9,7 +9,10 @@
 import CoreLocation
 
 class StopListModel: NSObject {
+    
+    private static let DistanceDelta: CLLocationDistance = 30 // distance from last location when to reload data
 	
+    
 	public var currentLocation: CLLocation? { didSet {
 		verifyLocationChange()
 	}}
@@ -18,12 +21,13 @@ class StopListModel: NSObject {
 	// MARK: - Verify Location Change
 	private var lastNextStop: Stop?
 	
+    // reload stops when distance delta > DistanceOffset
 	private func verifyLocationChange() {
-		guard let currentLocation = currentLocation else { print("currentLocation is nil"); return }
+		guard let currentLocation = currentLocation else { NSLog("currentLocation is nil"); return }
 		if let lastClosestStop = actualStops.first {
 			let currDistance = currentLocation.distance(from: lastClosestStop.location!)
-//			print("last: " + lastActualStop.name + " dist: " + String(format: "%.0f", currDistance))
-			if currDistance > 30 {
+//			NSLog("last: " + lastActualStop.name + " dist: " + String(format: "%.0f", currDistance))
+            if currDistance > StopListModel.DistanceDelta {
 				loadStops()
 			}
 		} else {
@@ -50,8 +54,8 @@ class StopListModel: NSObject {
 	
 	public func loadStops() {
 		if paused { return }
-		guard let currentLocation = currentLocation else { print("coordinate is nil"); return }
-		guard stopLoadingBusy == false else { print("stopLoadingBusy"); return }
+		guard let currentLocation = currentLocation else { NSLog("coordinate is nil"); return }
+		guard stopLoadingBusy == false else { NSLog("stopLoadingBusy"); return }
 		stopLoadingBusy = true
 		
 		let client = EFAClient()
@@ -105,7 +109,7 @@ class StopListModel: NSObject {
 		else {
 			if !cache.requestedStops.contains(stop) {
 				cache.requestedStops.append(stop)
-				print("Get lines for \(stop.name)")
+				NSLog("Get lines for \(stop.name)")
 				let efaClient = EFAClient()
 				efaClient.loadLines(for: stop.id) { (result) in
 					let lines: [Line]
@@ -116,7 +120,7 @@ class StopListModel: NSObject {
 						cache.stopLines[stop] = lines
 					case .failure(let error):
 						lines = []
-						print(error.localizedDescription)
+						NSLog(error.localizedDescription)
 					}
 					
 					completion(lines)

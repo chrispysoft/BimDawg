@@ -20,7 +20,10 @@ class StopListTableViewCell: UITableViewCell {
 		if let stop = stop  {
 			stopNameLabel.text = stop.name
 			distanceLabel.text = String(stop.distance ?? 0) + " m"
-		}
+        } else {
+            stopNameLabel.text = ""
+            distanceLabel.text = ""
+        }
 		
 	}
 }

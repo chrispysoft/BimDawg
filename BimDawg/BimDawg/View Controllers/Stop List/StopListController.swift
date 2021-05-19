@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreLocation
 
 class StopListController: UITableViewController {
 	
@@ -17,17 +16,11 @@ class StopListController: UITableViewController {
 	
 	override func viewDidLoad() {
 		definesPresentationContext = true
-		coordinateProvider.updateHandler = { result in
-			switch result {
-			case .success(let location):
-				self.stopListModel.currentLocation = location
-			case .failure(let error):
-				self.handleError(error)
-			}
-		}
-		stopListModel.updateHandler = stopListChangedHandler
+        // register model handler functions
+        coordinateProvider.updateHandler = coordinateChanged
+        stopListModel.updateHandler = stopListChanged
 	}
-	
+    
 	override func viewDidAppear(_ animated: Bool) {
 		stopListModel.paused = false
 	}
@@ -36,14 +29,23 @@ class StopListController: UITableViewController {
 		stopListModel.paused = true
 	}
 	
+    
+    // MARK: - Model update and callback
+    // update model when coordiante changes
+    private func coordinateChanged(_ result: CoordinateProvider.UpdateResult) {
+        NSLog("coordinateChanged")
+        
+        switch result {
+        case .success(let location):
+            stopListModel.currentLocation = location
+        case .failure(let error):
+            handleError(error)
+        }
+    }
 	
-	private func coordinateChangedHandler(_ location: CLLocation) {
-		stopListModel.currentLocation = location
-	}
-	
-	
-	private func stopListChangedHandler(result: StopListModel.UpdateResult) {
-		print("stopList changed")
+    // reload table view when model changes
+	private func stopListChanged(result: StopListModel.UpdateResult) {
+		NSLog("stopListChanged")
 		
 		switch result {
 		case .success:
@@ -53,6 +55,7 @@ class StopListController: UITableViewController {
 		}
 	}
 	
+    
 	// MARK: - Error handling
 	private func handleError(_ error: Error) {
         let alert = UIAlertController(title: "BimDawg Error", message: error.localizedDescription, preferredStyle: .alert)

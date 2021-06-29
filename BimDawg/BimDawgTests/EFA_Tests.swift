@@ -96,5 +96,23 @@ class EFA_Tests: XCTestCase {
 //        }
 //        wait(for: [expectation], timeout: 10.0)
 //    }
+    
+    func test_ServingLineRegexReplace() throws {
+        let excludes = ["Linz/Donau", "Leonding", "Traun"]
+        var rawList: [String : Any] = [
+            "direction": "",
+            "directionFrom": "Source",
+            "name": "Bim",
+            "number": "0",
+            "realtime": "0"
+        ]
+        let target = "Target"
+        
+        for exclude in excludes {
+            rawList["direction"] = "\(exclude) \(target)"
+            let line = try ServingLine(propertyList: rawList)
+            XCTAssertEqual(line.direction, target)
+        }
+    }
 	
 }

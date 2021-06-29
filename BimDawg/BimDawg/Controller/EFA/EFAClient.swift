@@ -469,6 +469,8 @@ struct DateTime {
 }
 
 public struct ServingLine {
+    private static let DirectionRegex = try! NSRegularExpression(pattern: "^(Linz/Donau|Leonding|Traun)\\s+")
+    
 	public var direction: String
 	var directionFrom: String
 	var name: String
@@ -485,15 +487,16 @@ public struct ServingLine {
 		return result
 	}
 	
-	init(propertyList: [String: Any]) throws {
-		guard let direction = propertyList["direction"] as? String,
+	public init(propertyList: [String: Any]) throws {
+		guard
+            let direction = propertyList["direction"] as? String,
 			let directionFrom = propertyList["directionFrom"] as? String,
 			let name = propertyList["name"] as? String,
 			let number = propertyList["number"] as? String,
 			let realtime = propertyList["realtime"] as? String
-			else { throw EFATypeError.initFailed(ServingLine.self) }
+        else { throw EFATypeError.initFailed(ServingLine.self) }
 		
-		self.direction = direction
+        self.direction = ServingLine.DirectionRegex.stringByReplacingMatches(in: direction, options: [], range: NSMakeRange(0, direction.utf16.count), withTemplate: "")
 		self.directionFrom = directionFrom
 		self.name = name
 		self.number = number
